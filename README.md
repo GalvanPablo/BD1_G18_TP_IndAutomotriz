@@ -48,7 +48,7 @@ Luego ejecutar los bloques segun sea necesario:
 ## Carga de Datos
 `SOURCE Datos\INSERTS - Proveedor - Compra.sql`  
 `SOURCE Datos\INSERTS - Direccion - Concesionari.sql`  
-`SOURCE Datos\INSERTS - Marca - Modelo - Linea de montaje.sql` 
+`SOURCE Datos\INSERTS - Marca - Modelo - Linea de montaje.sql`  
 `SOURCE Datos\INSERT - Pedido y detalle.sql`  
 <br>
 
