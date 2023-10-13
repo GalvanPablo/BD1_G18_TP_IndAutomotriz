@@ -8,27 +8,24 @@ DELIMITER //
 CREATE FUNCTION estacion_estaVacia_fn(
 	estacion_id INT
 )
-RETURNS BIT(1) READS SQL DATA
+RETURNS INT READS SQL DATA
 BEGIN
-	DECLARE estaVacia BIT(1);
+	DECLARE estaVacia INT;
+    DECLARE ultimoIngreso DATETIME;
     DECLARE ultimoEgreso DATETIME;
 	
     #Obtengo el registro del ultimo ingreso de la estación
-    SELECT ve.fecha_hora_egreso INTO ultimoEgreso FROM vehiculo_en_estacion ve
+    SELECT ve.fecha_hora_ingreso, ve.fecha_hora_egreso INTO ultimoIngreso, ultimoEgreso FROM vehiculo_en_estacion ve
     WHERE ve.estacion_estacion_id = estacion_id
     ORDER BY ve.fecha_hora_ingreso DESC
     LIMIT 1;
     
     #Compruebo si en ese ultimo registro existe una fecha/hora de salida
-    IF ultimoEgreso IS NULL THEN
+    IF ultimoIngreso IS NOT NULL AND ultimoEgreso IS NULL THEN
 		SET estaVacia = 0; #No esta vacia ya que no tiene hora de salida
 	ELSE
 		SET estaVacia = 1; #Si esta vacia
 	END IF;
-
-    # Posibles formas de acortar la ultima comprobacion
-    #SET estaVacia = (ultimoEgreso IS NULL) ? 1 : 0;
-    #SELECT (ultimoEgreso IS NULL) INTO estaVacia;
     
     
     RETURN estaVacia;

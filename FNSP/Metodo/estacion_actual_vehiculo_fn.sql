@@ -12,7 +12,7 @@ RETURNS INT READS SQL DATA
 BEGIN
 	DECLARE vehiculo_id INT DEFAULT -2;
 	DECLARE estacion_id INT;
-    DECLARE fecha_hora_egreso DATETIME
+    DECLARE fecha_hora_egreso DATETIME;
     
     # Obtengo el ID vehiculo
     SELECT v.vehiculo_id INTO vehiculo_id FROM vehiculo v WHERE v.nro_chasis = nro_chasis;
@@ -20,7 +20,8 @@ BEGIN
     # Si no es NULL es que existe, y puede que este en una estación
     IF vehiculo_id IS NOT NULL THEN
 		# Obtengo la ultima estación en la que estuvo el vehiculo
-        SELECT ve.estacion_id, ve.fecha_hora_egreso INTO estacion_id, fecha_hora_egreso FROM vehiculo_en_estacion ve
+        SELECT ve.estacion_estacion_id, ve.fecha_hora_egreso INTO estacion_id, fecha_hora_egreso
+        FROM vehiculo_en_estacion ve
         WHERE ve.vehiculo_vehiculo_id = vehiculo_id
         ORDER BY ve.fecha_hora_ingreso DESC
         LIMIT 1;
@@ -31,8 +32,8 @@ BEGIN
         ELSE
             IF fecha_hora_egreso IS NOT NULL THEN
                 # El vehiculo esta terminado
-                SET estacion_id = 0
-            END IF
+                SET estacion_id = 0;
+            END IF;
         END IF;
     END IF;
 

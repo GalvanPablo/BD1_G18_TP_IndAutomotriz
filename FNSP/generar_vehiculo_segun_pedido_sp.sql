@@ -42,7 +42,6 @@ BEGIN
 			IF eof = 1 THEN
 				LEAVE getDetallePedido;
 			END IF;
-			#SET cMensaje = CONCAT(cMensaje, " - Modelo: ", detalle_modeloID, " Cantidad: ", detalle_cantidad);
 			
 			SET iteracion = 0;
 			WHILE iteracion < detalle_cantidad DO
