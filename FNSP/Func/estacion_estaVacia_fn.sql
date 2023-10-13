@@ -25,6 +25,10 @@ BEGIN
 	ELSE
 		SET estaVacia = 1; #Si esta vacia
 	END IF;
+
+    # Posibles formas de acortar la ultima comprobacion
+    #SET estaVacia = (ultimoEgreso IS NULL) ? 1 : 0;
+    #SELECT (ultimoEgreso IS NULL) INTO estaVacia;
     
     
     RETURN estaVacia;
