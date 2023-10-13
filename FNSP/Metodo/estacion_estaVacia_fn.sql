@@ -1,9 +1,5 @@
 DROP FUNCTION IF EXISTS estacion_estaVacia_fn;
 
-##############################################################################
-####### FALTA TESTEAR ########################################################
-##############################################################################
-
 DELIMITER //
 CREATE FUNCTION estacion_estaVacia_fn(
 	estacion_id INT

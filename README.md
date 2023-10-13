@@ -50,6 +50,7 @@ Luego ejecutar los bloques segun sea necesario:
 `SOURCE FNSP/Metodo/estacion_actual_vehiculo_fn.sql`  
 `SOURCE FNSP/Metodo/estacion_estaVacia_fn.sql`  
 `SOURCE FNSP/iniciar_produccion_vehiculo_sp.sql`  
+`SOURCE FNSP/avanzar_produccion_vehiculo_sp.sql`  
 <br>
 
 ## Carga de Datos
@@ -92,6 +93,7 @@ Luego ejecutar los bloques segun sea necesario:
 ### Otros
 `SOURCE testeos_internos/generar_vehiculo_segun_pedido.sql`  
 `SOURCE testeos_internos/iniciar_produccion_vehiculo.sql`  
+`SOURCE testeos_internos/avanzar_produccion_vehiculo.sql`  
 <br>
 
 ---

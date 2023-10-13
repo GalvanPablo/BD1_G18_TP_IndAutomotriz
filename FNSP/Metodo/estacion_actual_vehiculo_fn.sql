@@ -1,9 +1,5 @@
 DROP FUNCTION IF EXISTS estacion_actual_vehiculo_fn;
 
-##############################################################################
-####### FALTA TESTEAR ########################################################
-##############################################################################
-
 DELIMITER //
 CREATE FUNCTION estacion_actual_vehiculo_fn(
 	nro_chasis VARCHAR(45)
