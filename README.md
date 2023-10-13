@@ -45,8 +45,6 @@ Luego ejecutar los bloques segun sea necesario:
 `SOURCE FNSP\ABMs\proveedor\proveedor_modificacion_sp.sql`  
 <br>
 
----
-
 ## Carga de Datos
 `SOURCE Datos\INSERTS - Proveedor - Compra.sql`  
 `SOURCE Datos\INSERTS - Direccion - Concesionari.sql`  
