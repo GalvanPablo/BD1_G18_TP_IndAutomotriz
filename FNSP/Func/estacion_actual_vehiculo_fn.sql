@@ -1,5 +1,9 @@
 DROP FUNCTION IF EXISTS estacion_actual_vehiculo_fn;
 
+##############################################################################
+####### FALTA TESTEAR ########################################################
+##############################################################################
+
 DELIMITER //
 CREATE FUNCTION estacion_actual_vehiculo_fn(
 	nro_chasis VARCHAR(45)
@@ -22,6 +26,7 @@ BEGIN
         LIMIT 1;
         
         # Si la variable estacion_id queda nula es que el auto aun no esta en producción
+        # Ver si el auto termino de producirse o nunca entro a producción
         
     END IF;
     RETURN estacion_id;

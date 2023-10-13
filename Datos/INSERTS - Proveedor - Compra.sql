@@ -1,0 +1,4 @@
+CALL proveedor_alta_sp("Firestone", "contacto@firestone.com", "43197812", "Remedios de Escalada", '360', NULL, "Buenos Aires", "Buenos Aires", "Argentina", @nResultado, @cMensaje);
+CALL proveedor_alta_sp("Michelin", "ventas@michelin.com", "36781245", "Leandro N. Alem", '1345', NULL, "CABA", "Buenos Aires", "Argentina", @nResultado, @cMensaje);
+CALL proveedor_alta_sp("Momo", "contacto@momo.com", "49876556", "Alsina", '10369', NULL, "Buenos Aires", "Buenos Aires", "Argentina", @nResultado, @cMensaje);
+CALL proveedor_alta_sp("Fric-Rot", "contacto@fricrot.com", "47851623", "Recoleta", '840', NULL, "CABA", "Buenos Aires", "Argentina", @nResultado, @cMensaje);

@@ -5,7 +5,7 @@ CREATE PROCEDURE pedido_modificacion_sp(
     
     IN pedido_id INT,
     IN p_concesionario_id INT,
-    IN nueva_fecha_pedido DATE
+    IN nueva_fecha_pedido DATE,
 
     -- Resultado
     OUT nResultado INT,
@@ -27,12 +27,11 @@ BEGIN
 			SET nResultado = -1;
 			SET cMensaje = CONCAT("No se encontró un concesionario con el ID '", p_concesionario_id, "' o esta dado de baja");
 		ELSE	-- Si existe
-			
-    UPDATE pedido
-    SET
-        fecha_pedido = nueva_fecha_pedido
-    WHERE pedido_id = pedido_id
-END IF
-
+			UPDATE pedido
+			SET
+				fecha_pedido = nueva_fecha_pedido
+			WHERE pedido_id = pedido_id;
+		END IF;
+	END IF;
 END //
 DELIMITER ;
