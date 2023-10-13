@@ -47,42 +47,44 @@ Luego ejecutar los bloques segun sea necesario:
 
 ---
 
-## Uso ABMs
+## Carga de Datos
+`SOURCE Datos\INSERTS - Proveedor - Compra.sql`  
+`SOURCE Datos\INSERTS - Direccion - Concesionari.sql`  
+`SOURCE Datos\INSERTS - Marca - Modelo - Linea de montaje.sql` 
+`SOURCE Datos\INSERT - Pedido y detalle.sql`  
+<br>
+
+---
+
+## Testeos Internos (SOLO A MODO DE PRUEBA DE LOS SP)
 ### Altas
-`SOURCE Uso ABMs\proveedor\proveedor_alta.sql`  
-`SOURCE Uso ABMs\insumo\test_sp_alta_insumo.sql`  
-`SOURCE Uso ABMs\concesionario\prueba_alta_concesionario.sql`  
-`SOURCE Uso ABMs\pedido\pedido_alta.sql`  
-`SOURCE Uso ABMs\detalle pedido\prueba_alta_detalle_pedido.sql`  
+`SOURCE testeos_internos\proveedor\proveedor_alta.sql`  
+`SOURCE testeos_internos\insumo\test_sp_alta_insumo.sql`  
+`SOURCE testeos_internos\concesionario\prueba_alta_concesionario.sql`  
+`SOURCE testeos_internos\pedido\pedido_alta.sql`  
+`SOURCE testeos_internos\detalle pedido\prueba_alta_detalle_pedido.sql`  
 
 <br>
 
 ### Modificaciones
 
-`SOURCE Uso ABMs\concesionario\prueba_modificacion_concesionario.sql`  
-`SOURCE Uso ABMs\detalle pedido\prueba_modificacion_detalle_pedido.sql`  
-`SOURCE Uso ABMs\insumo\test_sp_modificar_insumo.sql`  
-`SOURCE Uso ABMs\pedido\pedido_modificacion.sql`  
-`SOURCE Uso ABMs\proveedor\proveedor_modificacion.sql`  
+`SOURCE testeos_internos\concesionario\prueba_modificacion_concesionario.sql`  
+`SOURCE testeos_internos\detalle pedido\prueba_modificacion_detalle_pedido.sql`  
+`SOURCE testeos_internos\insumo\test_sp_modificar_insumo.sql`  
+`SOURCE testeos_internos\pedido\pedido_modificacion.sql`  
+`SOURCE testeos_internos\proveedor\proveedor_modificacion.sql`  
 <br>
 
 ### Bajas
-`SOURCE Uso ABMs\concesionario\prueba_baja_concesionario.sql`  
-`SOURCE Uso ABMs\detalle pedido\prueba_baja_detalle_pedido.sql`  
-`SOURCE Uso ABMs\insumo\test_sp_baja_insumo.sql`  
-`SOURCE Uso ABMs\pedido\pedido_baja.sql`  
-`SOURCE Uso ABMs\proveedor\proveedor_baja.sql`  
+`SOURCE testeos_internos\concesionario\prueba_baja_concesionario.sql`  
+`SOURCE testeos_internos\detalle pedido\prueba_baja_detalle_pedido.sql`  
+`SOURCE testeos_internos\insumo\test_sp_baja_insumo.sql`  
+`SOURCE testeos_internos\pedido\pedido_baja.sql`  
+`SOURCE testeos_internos\proveedor\proveedor_baja.sql`  
 <br>
 
----
-
-## Uso de Stored procedures
-`SOURCE \Uso de FNSP\generar_vehiculo_segun_pedido.sql`  
-
-## Datos
-`SOURCE Datos\INSERT - Pedido y detalle.sql`  
-`SOURCE Datos\INSERTS - Marca - Modelo - Linea de montaje.sql`  
-`SOURCE Datos\INSERTS - Proveedor - Compra.sql`  
+### Otros
+`SOURCE testeos_internos\generar_vehiculo_segun_pedido.sql`  
 <br>
 
 ---
